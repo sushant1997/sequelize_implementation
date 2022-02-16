@@ -29,3 +29,28 @@
   <button type="submit" class="btn btn-primary mt-1">Submit</button>
 
 </form>
+
+
+<h3>Income table</h3>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Source</th>
+      <th scope="col">categories</th>
+      <th scope="col">amount</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    {{#each income}}
+    <tr>
+      <th scope="row">{{this.id}}</th>
+      <td>{{this.source}}</td>
+      <td>{{this.categories}}</td>
+      <td>{{this.amount}}</td>
+    </tr>
+    {{/each}}
+    
+  </tbody>
+</table>

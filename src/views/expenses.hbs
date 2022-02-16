@@ -26,8 +26,33 @@
     <input type="number" class="form-control" name="amount">
   </div>
  
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary mt-1">Submit</button>
   
 </form>
+
+
+ <table class="table mt-10">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Source</th>
+      <th scope="col">categories</th>
+      <th scope="col">amount</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    {{#each expense}}
+    <tr>
+      <th scope="row">{{this.id}}</th>
+      <td>{{this.source}}</td>
+      <td>{{this.categories}}</td>
+      <td>{{this.amount}}</td>
+    </tr>
+    {{/each}}
+    
+  </tbody>
+
+</table>
 
 

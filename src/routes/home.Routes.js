@@ -5,4 +5,5 @@ router.get('/',homeC.getData)
 
 
 
+
 module.exports = router

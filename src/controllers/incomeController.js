@@ -1,14 +1,21 @@
-const {Income, Expence} = require('../../models/index');
+const {Income} = require('../../models/index');
 
 
 const getPage = async(req, res)=>{
-    await res.render('income')
+
+    try{
+        const income = await Income.findAll({raw: true})
+        await res.render('income',{income});
+}catch(e){
+    console.log(e)
+}  
+    
 }
 
 
 const Save = async(req, res) =>{
     try{
-        console.log(req.body)
+        
     const {source, categories, amount } = req.body;
     await Income.create({ source, categories, amount });
     res.redirect('home')

@@ -1,7 +1,7 @@
 <h1>Income and Expense Tracker</h1>
-<a class ="btn btn-primary" href="/income">Income</a>
+<a class ="btn btn-primary" href="/income">Incomes</a>
 <a class ="btn btn-primary" href="/expenses">Expenses</a>
-<h3>Income table</h3>
+{{!-- <h3>Income table</h3>
 <table class="table">
   <thead>
     <tr>
@@ -23,6 +23,28 @@
     {{/each}}
     
   </tbody>
+</table> --}}
 
-  <h3>Expenses Table</h3>
-</table>
+   {{!-- <table class="table mt-10">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Source</th>
+      <th scope="col">categories</th>
+      <th scope="col">amount</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    {{#each expense}}
+    <tr>
+      <th scope="row">{{this.id}}</th>
+      <td>{{this.source}}</td>
+      <td>{{this.categories}}</td>
+      <td>{{this.amount}}</td>
+    </tr>
+    {{/each}}
+    
+  </tbody>
+
+</table> --}}

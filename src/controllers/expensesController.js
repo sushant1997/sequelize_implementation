@@ -1,13 +1,18 @@
-
-const {Income, Expense} = require('../../models/index');
-
+const {Expense} = require('../../models/index');
 
 const getPage = async(req, res)=>{
-    await res.render('expenses')
+
+    try{
+        const expense = await Expense.findAll({raw: true})
+        await res.render('expenses',{expense});
+}catch(e){
+    console.log(e)
+} 
+    
 }
 
 
-const Save = async(req, res) =>{
+const create = async(req, res) =>{
     try{
         
     const {source, categories, amount } = req.body;
@@ -21,5 +26,5 @@ const Save = async(req, res) =>{
 
 
 module.exports ={
-   getPage, Save
+   getPage, create
 }
